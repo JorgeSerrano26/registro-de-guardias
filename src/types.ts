@@ -7,9 +7,30 @@ export type Dev = {
     name: string
 }
 
+export type NewGuardia = {
+    user_id: string;
+    startDate: string;
+    endDate: string;
+}
+
+export type NewDPG = NewGuardia;
+
+export type GuardiaDBResponse = {
+    id: number;
+    created_at: string;
+    user_id: number;
+    startDate: string;
+    endDate: string;
+    devs: {
+        id: number;
+        name: string;
+    },
+    carry_over: number
+}
+
 export type DevWithId = {
-    id: string;
-    created_at: string
+    id: number;
+    created_at?: string
 } & Dev;
 
 export type DevDate = {

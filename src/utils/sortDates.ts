@@ -1,7 +1,7 @@
-import { UserDate } from "../types";
+import { GuardiaDBResponse } from "@/types";
 
-const sortDates = (items: UserDate[]) => {
-    return items.sort((b, a) => new Date(b.date.startDate!).getTime() - new Date(a.date.startDate!).getTime())
+const sortDates = (items: GuardiaDBResponse[] | null) => {
+    return items?.sort((b, a) => new Date(b.startDate!).getTime() - new Date(a.startDate!).getTime())
 }
 
 export default sortDates;

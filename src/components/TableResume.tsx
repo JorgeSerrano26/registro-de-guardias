@@ -1,7 +1,7 @@
 import { Resume } from "../types";
 
 type Props = {
-    resume?: Resume
+    resume?: Resume | null
 }
 
 const TableResume = ({ resume }: Props) => {
@@ -37,7 +37,7 @@ const TableResume = ({ resume }: Props) => {
                                 {resume.total.toString()}
                             </td>
                             <td className="px-6 py-4 bg-gray-50 ">
-                                {resume.carryOver.toString()}
+                                {resume.carryOver.toString()} - Todavia no funciona
                             </td>
                             <td className={`px-6 py-4 bg-gray-50 ${resume.availableDpgs > 0 ? 'text-green-500' : (resume.availableDpgs === 0) ? 'text-gray-900' : 'text-red-500'}`}>
                                 {resume.availableDpgs.toString()}

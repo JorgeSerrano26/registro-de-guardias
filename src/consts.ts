@@ -1,1 +1,1 @@
-const MIN_DAYS_DPG = 7;
+export const MIN_DAYS_DPG = 7;
